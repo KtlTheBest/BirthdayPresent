@@ -36,13 +36,14 @@ void printGuess(int size){
     putchar('\n');
 }
 
-void finishGame(){
+void finishGame(char c[]){
     printf("Correct! The answer is:\n");
     int i;
     for(i = 0; i < 13; ++ i){
         putchar(answer[i]);
         if(i == 4) putchar(' ');
     }
+    printf(", %s", c);
     printf("!\n");
 }
 
@@ -83,7 +84,7 @@ void playGame(){
             count ++;
         }
     }
-    finishGame();
+    finishGame(c);
 }
 
 int main(){
